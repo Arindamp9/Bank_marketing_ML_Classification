@@ -38,6 +38,7 @@ Here we have not dropped the **duration** column, also we know that we should dr
 *	Then we calculate the number of unique elements in each categorical variables and made a list of each elements to corresponding categorical variable.
 *	Change the element **yes** in variable **y** by **1** and the element **no** by **0**. Use the following command:
 **df['y']=df['y'].replace({'no':0,'yes':1})**
+*  Here we have treated **Unknown** as a label.
 *	Next we plot heatmap corresponding to Pearson Correlation. From the diagram conclude that **euribor3m**,**nr.employed**,**emp.var.rate** are highly correlated to each other. So we will only keep one of them and drop other two. We will keep **euribor3m** feature, since it is highly correlated with others.
  
 *	We drop the default column as well since it contains 32588 **no**, 8597 **unknown** and only 3 **yes**. Hence this feature will not have any significant effect on the model.
